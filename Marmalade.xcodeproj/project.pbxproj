@@ -17,6 +17,7 @@
 		0458A33A272B3B5F004DBDFE /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A339272B3B5F004DBDFE /* TodoModel.swift */; };
 		04944CF6272B41CB002D0AC8 /* MockTodoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944CF5272B41CB002D0AC8 /* MockTodoEntity.swift */; };
 		04944CF8272B492C002D0AC8 /* TodoManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A331272B303F004DBDFE /* TodoManagerTest.swift */; };
+		04944CFA272B6124002D0AC8 /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944CF9272B6124002D0AC8 /* NewTodoView.swift */; };
 		20DE3516F3B3FE151D8B6536 /* Pods_MarmaladeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CD79F7C90707F6A002F0EC /* Pods_MarmaladeTests.framework */; };
 		E3EE02C65E14D6DE42CD85B3 /* Pods_Marmalade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0863FD657FA5B1781883DF5 /* Pods_Marmalade.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		0458A334272B312C004DBDFE /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
 		0458A339272B3B5F004DBDFE /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		04944CF5272B41CB002D0AC8 /* MockTodoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoEntity.swift; sourceTree = "<group>"; };
+		04944CF9272B6124002D0AC8 /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
 		2560E865BA1FA58E3FB7B1DF /* Pods-MarmaladeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarmaladeTests.debug.xcconfig"; path = "Target Support Files/Pods-MarmaladeTests/Pods-MarmaladeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		287CF6C059FA623E4AC364A4 /* Pods-Marmalade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmalade.debug.xcconfig"; path = "Target Support Files/Pods-Marmalade/Pods-Marmalade.debug.xcconfig"; sourceTree = "<group>"; };
 		31CD79F7C90707F6A002F0EC /* Pods_MarmaladeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarmaladeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				0458A307272B2951004DBDFE /* AllTaskView.swift */,
+				04944CF9272B6124002D0AC8 /* NewTodoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04944CFA272B6124002D0AC8 /* NewTodoView.swift in Sources */,
 				0458A335272B312C004DBDFE /* TodoManager.swift in Sources */,
 				0458A308272B2951004DBDFE /* AllTaskView.swift in Sources */,
 				0458A306272B2951004DBDFE /* MarmaladeApp.swift in Sources */,
