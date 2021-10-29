@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class TodoManager {
+class TodoManager: TodoManagerProtocol {
     
     private(set) lazy var realmDb: TodoEntityProtocol = {
         RealmDb()
@@ -39,7 +39,7 @@ class RealmDb: TodoEntityProtocol {
      }
     
     func create(todo: Todo) -> Bool {
-        let model = todo.ToModel()
+        guard let model = todo.ToModel() else { return false }
        
         do {
             try realConnect.write {

@@ -10,38 +10,60 @@ import SwiftUI
 struct NewTodoView: View {
     @State private var name:String = ""
     @Binding var isNewTask: Bool
+    @Binding var presenter: TodoPresenterProtocol?
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        Form {
-            Section {
-                Text("What do you plan to do?")
             VStack(spacing: 20) {
-                
+                Text("What do you plan to do?")
                 TextField("Enter your task", text: $name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                
                 HStack {
                     Button("Cancel") {
-                        isNewTask = false
+                    presentationMode.wrappedValue.dismiss()
                     }
-                    .padding()
                     
                     Spacer()
                     
-                    Button("Save") {
-                        
-                    }
-                    .padding()
-            
+                    ButtonView(title: "Save", backgroundColor: .blue, foregroundColor: .white){
+                        isNewTask.toggle()
+                        presentationMode.wrappedValue.dismiss()
+                    }            
                 }
+                Spacer()
             }
-        }
-        }
-        .cornerRadius(25.0)
+            .onDisappear {
+                guard isNewTask else { return }
+                presenter?.make(todo: Todo(name: name, isDone: false))
+            }
+            .padding()
     }
+    
+    
 }
 
 struct NewTodoView_Previews: PreviewProvider {
     static var previews: some View {
-        NewTodoView(isNewTask: .constant(false))
+        NewTodoView(isNewTask: .constant(false), presenter: .constant(TodoPresenter()))
+    }
+}
+
+struct ButtonView: View {
+    @State var title:String
+    @State var backgroundColor: Color
+    @State var foregroundColor: Color
+    var action: () -> ()
+
+    var body: some View {
+        Button(title, action: {
+            action()
+        }) 
+            .padding([.leading, .trailing], 50)
+            .padding([.top, .bottom], 10)
+        .background(backgroundColor)
+        .foregroundColor(foregroundColor)
+        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 6, height: 6)))
+        .shadow(radius: 8)
     }
 }

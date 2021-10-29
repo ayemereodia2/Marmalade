@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04318320272C718800CB36EE /* TodoWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431831F272C718800CB36EE /* TodoWireFrame.swift */; };
 		0458A306272B2951004DBDFE /* MarmaladeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A305272B2951004DBDFE /* MarmaladeApp.swift */; };
 		0458A308272B2951004DBDFE /* AllTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A307272B2951004DBDFE /* AllTaskView.swift */; };
 		0458A30A272B2955004DBDFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0458A309272B2955004DBDFE /* Assets.xcassets */; };
@@ -18,6 +19,14 @@
 		04944CF6272B41CB002D0AC8 /* MockTodoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944CF5272B41CB002D0AC8 /* MockTodoEntity.swift */; };
 		04944CF8272B492C002D0AC8 /* TodoManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A331272B303F004DBDFE /* TodoManagerTest.swift */; };
 		04944CFA272B6124002D0AC8 /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944CF9272B6124002D0AC8 /* NewTodoView.swift */; };
+		04944CFD272C0F58002D0AC8 /* TodoPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944CFC272C0F58002D0AC8 /* TodoPresenterTest.swift */; };
+		04944CFF272C0FE4002D0AC8 /* TodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944CFE272C0FE4002D0AC8 /* TodoPresenter.swift */; };
+		04944D01272C1088002D0AC8 /* TodoInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944D00272C1088002D0AC8 /* TodoInteractorTest.swift */; };
+		04944D03272C10DF002D0AC8 /* TodoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944D02272C10DF002D0AC8 /* TodoInteractor.swift */; };
+		04944D06272C177D002D0AC8 /* MockTodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944D05272C177D002D0AC8 /* MockTodoManager.swift */; };
+		04944D08272C1EFC002D0AC8 /* MockTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944D07272C1EFC002D0AC8 /* MockTodoPresenter.swift */; };
+		04944D0A272C26B0002D0AC8 /* MockTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944D09272C26B0002D0AC8 /* MockTodoView.swift */; };
+		04944D0C272C2712002D0AC8 /* MockTodoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04944D0B272C2712002D0AC8 /* MockTodoInteractor.swift */; };
 		20DE3516F3B3FE151D8B6536 /* Pods_MarmaladeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CD79F7C90707F6A002F0EC /* Pods_MarmaladeTests.framework */; };
 		E3EE02C65E14D6DE42CD85B3 /* Pods_Marmalade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0863FD657FA5B1781883DF5 /* Pods_Marmalade.framework */; };
 /* End PBXBuildFile section */
@@ -33,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0431831F272C718800CB36EE /* TodoWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWireFrame.swift; sourceTree = "<group>"; };
 		0458A302272B2951004DBDFE /* Marmalade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marmalade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0458A305272B2951004DBDFE /* MarmaladeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarmaladeApp.swift; sourceTree = "<group>"; };
 		0458A307272B2951004DBDFE /* AllTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskView.swift; sourceTree = "<group>"; };
@@ -48,6 +58,14 @@
 		0458A339272B3B5F004DBDFE /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		04944CF5272B41CB002D0AC8 /* MockTodoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoEntity.swift; sourceTree = "<group>"; };
 		04944CF9272B6124002D0AC8 /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
+		04944CFC272C0F58002D0AC8 /* TodoPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPresenterTest.swift; sourceTree = "<group>"; };
+		04944CFE272C0FE4002D0AC8 /* TodoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPresenter.swift; sourceTree = "<group>"; };
+		04944D00272C1088002D0AC8 /* TodoInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoInteractorTest.swift; sourceTree = "<group>"; };
+		04944D02272C10DF002D0AC8 /* TodoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoInteractor.swift; sourceTree = "<group>"; };
+		04944D05272C177D002D0AC8 /* MockTodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoManager.swift; sourceTree = "<group>"; };
+		04944D07272C1EFC002D0AC8 /* MockTodoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoPresenter.swift; sourceTree = "<group>"; };
+		04944D09272C26B0002D0AC8 /* MockTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoView.swift; sourceTree = "<group>"; };
+		04944D0B272C2712002D0AC8 /* MockTodoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoInteractor.swift; sourceTree = "<group>"; };
 		2560E865BA1FA58E3FB7B1DF /* Pods-MarmaladeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarmaladeTests.debug.xcconfig"; path = "Target Support Files/Pods-MarmaladeTests/Pods-MarmaladeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		287CF6C059FA623E4AC364A4 /* Pods-Marmalade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmalade.debug.xcconfig"; path = "Target Support Files/Pods-Marmalade/Pods-Marmalade.debug.xcconfig"; sourceTree = "<group>"; };
 		31CD79F7C90707F6A002F0EC /* Pods_MarmaladeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarmaladeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +161,8 @@
 				04944CF3272B4196002D0AC8 /* Mocks */,
 				0458A31E272B2A1A004DBDFE /* Info.plist */,
 				0458A331272B303F004DBDFE /* TodoManagerTest.swift */,
+				04944CFC272C0F58002D0AC8 /* TodoPresenterTest.swift */,
+				04944D00272C1088002D0AC8 /* TodoInteractorTest.swift */,
 			);
 			path = MarmaladeTests;
 			sourceTree = "<group>";
@@ -158,6 +178,7 @@
 		0458A325272B2AA2004DBDFE /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				04944D02272C10DF002D0AC8 /* TodoInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -174,6 +195,7 @@
 		0458A327272B2AC2004DBDFE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				04944CFE272C0FE4002D0AC8 /* TodoPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -191,6 +213,7 @@
 		0458A329272B2AE1004DBDFE /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				0431831F272C718800CB36EE /* TodoWireFrame.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -198,6 +221,7 @@
 		04944CF3272B4196002D0AC8 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				04944CFB272C0F35002D0AC8 /* Presenter */,
 				04944CF4272B41A5002D0AC8 /* Entity */,
 			);
 			path = Mocks;
@@ -207,8 +231,19 @@
 			isa = PBXGroup;
 			children = (
 				04944CF5272B41CB002D0AC8 /* MockTodoEntity.swift */,
+				04944D05272C177D002D0AC8 /* MockTodoManager.swift */,
+				04944D09272C26B0002D0AC8 /* MockTodoView.swift */,
+				04944D0B272C2712002D0AC8 /* MockTodoInteractor.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		04944CFB272C0F35002D0AC8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				04944D07272C1EFC002D0AC8 /* MockTodoPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		BB7929083E55A5D471BAB06B /* Pods */ = {
@@ -398,12 +433,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04318320272C718800CB36EE /* TodoWireFrame.swift in Sources */,
 				04944CFA272B6124002D0AC8 /* NewTodoView.swift in Sources */,
 				0458A335272B312C004DBDFE /* TodoManager.swift in Sources */,
 				0458A308272B2951004DBDFE /* AllTaskView.swift in Sources */,
 				0458A306272B2951004DBDFE /* MarmaladeApp.swift in Sources */,
+				04944CFF272C0FE4002D0AC8 /* TodoPresenter.swift in Sources */,
 				0458A32B272B2B2E004DBDFE /* TodoProtocol.swift in Sources */,
 				0458A33A272B3B5F004DBDFE /* TodoModel.swift in Sources */,
+				04944D03272C10DF002D0AC8 /* TodoInteractor.swift in Sources */,
 				0458A32E272B2F63004DBDFE /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,8 +450,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04944D06272C177D002D0AC8 /* MockTodoManager.swift in Sources */,
+				04944D01272C1088002D0AC8 /* TodoInteractorTest.swift in Sources */,
+				04944CFD272C0F58002D0AC8 /* TodoPresenterTest.swift in Sources */,
 				04944CF6272B41CB002D0AC8 /* MockTodoEntity.swift in Sources */,
+				04944D08272C1EFC002D0AC8 /* MockTodoPresenter.swift in Sources */,
 				04944CF8272B492C002D0AC8 /* TodoManagerTest.swift in Sources */,
+				04944D0C272C2712002D0AC8 /* MockTodoInteractor.swift in Sources */,
+				04944D0A272C26B0002D0AC8 /* MockTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

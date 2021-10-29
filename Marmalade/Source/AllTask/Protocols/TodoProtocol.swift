@@ -8,22 +8,36 @@
 import Foundation
 
 protocol TodoWireframeProtocol {
-    func build()
+    static func build() -> AllTaskView
 }
 protocol TodoViewProtocol {
     var presenter: TodoPresenterProtocol? { get set }
+    func display(all: [Todo])
 }
 
-protocol TodoPresenterProtocol {
-    var interactor: TodoInteractorProtocol? { get set }
+protocol TodoPresenterProtocol: AnyObject {
+    var view:TodoViewProtocol? { get set }
+    var interactor:TodoInteractorProtocol? { get set }
+    func show(all: [Todo])
+    func load()
+    func make(todo: Todo)
 }
 
 protocol TodoInteractorProtocol {
-    var entity: TodoEntityProtocol? { get set }
+    var manager: TodoManagerProtocol? { get set }
+    var presenter: TodoPresenterProtocol? { get set }
+    func getAllTodosFromManager()
+    func create(todo: Todo)
 }
 
 protocol TodoEntityProtocol {
     func create(todo: Todo) -> Bool
     func getall() -> [TodoModel] 
     func deteleAll() -> Bool
+}
+
+protocol TodoManagerProtocol {
+    func add(todo: Todo) -> Bool
+    func getAllTodos() -> [Todo]
+    func deleteAll() -> Bool
 }

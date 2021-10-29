@@ -7,12 +7,18 @@
 
 import Foundation
 
-struct Todo {
+struct Todo: Identifiable {
+    let id = UUID()
     let name:String
     let isDone: Bool
 }
 extension Todo {
-    func ToModel() -> TodoModel {
-        return TodoModel(name: self.name, isDone: self.isDone)
+    func ToModel() -> TodoModel? {
+        return TodoModel(name: name, isDone: isDone)
     }
+}
+
+
+class Todos: ObservableObject {
+    @Published var todo:[Todo] = []
 }

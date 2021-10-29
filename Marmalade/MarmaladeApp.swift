@@ -11,7 +11,7 @@ import SwiftUI
 struct MarmaladeApp: App {
     var body: some Scene {
         WindowGroup {
-            AllTaskView()
+            TodoWireFrame.build()
         }
     }
 }
