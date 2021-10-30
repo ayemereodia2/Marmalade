@@ -11,7 +11,7 @@ struct NewTodoView: View {
     @State private var name:String = ""
     @Binding var isNewTask: Bool
     @Binding var presenter: TodoPresenterProtocol?
-    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
             VStack(spacing: 20) {
                 Text("What do you plan to do?")
@@ -20,21 +20,21 @@ struct NewTodoView: View {
                     .padding()
                 
                 HStack {
-                    Button("Cancel") {
-                    presentationMode.wrappedValue.dismiss()
+                    ButtonView(title: "Cancel", backgroundColor: .gray, foregroundColor: .white){
+                        isNewTask = false
+                        //presentationMode.wrappedValue.dismiss()
                     }
                     
                     Spacer()
                     
                     ButtonView(title: "Save", backgroundColor: .blue, foregroundColor: .white){
-                        isNewTask.toggle()
-                        presentationMode.wrappedValue.dismiss()
+                        isNewTask = false
                     }            
                 }
                 Spacer()
             }
             .onDisappear {
-                guard isNewTask else { return }
+                guard !name.isEmpty else { return }
                 presenter?.make(todo: Todo(name: name, isDone: false))
             }
             .padding()

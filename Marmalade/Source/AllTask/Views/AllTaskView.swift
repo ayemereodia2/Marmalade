@@ -29,10 +29,11 @@ struct AllTaskView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
-                        self.isNewTask = true
+                       isNewTask = true
                     } label: {
                         Image(systemName: "pencil")
                     }.fullScreenCover(isPresented: $isNewTask, content: {
+                        
                         NewTodoView(isNewTask: $isNewTask, presenter: $presenter)
                     })
                 }
