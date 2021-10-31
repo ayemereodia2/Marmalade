@@ -8,13 +8,17 @@
 import Foundation
 
 struct Todo: Identifiable {
-    let id = UUID()
-    let name:String
-    let isDone: Bool
+    var id = UUID().uuidString
+    var name:String
+    var isDone: Bool
 }
 extension Todo {
     func ToModel() -> TodoModel? {
-        return TodoModel(name: name, isDone: isDone)
+        let model = TodoModel()
+        model.id = self.id
+        model.name = self.name
+        model.isDone = self.isDone
+        return model
     }
 }
 

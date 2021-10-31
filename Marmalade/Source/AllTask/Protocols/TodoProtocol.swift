@@ -21,6 +21,7 @@ protocol TodoPresenterProtocol: AnyObject {
     func show(all: [Todo])
     func load()
     func make(todo: Todo)
+    func modify(todo: Todo)
 }
 
 protocol TodoInteractorProtocol {
@@ -28,16 +29,21 @@ protocol TodoInteractorProtocol {
     var presenter: TodoPresenterProtocol? { get set }
     func getAllTodosFromManager()
     func create(todo: Todo)
+    func edit(todo: Todo)
 }
 
 protocol TodoEntityProtocol {
     func create(todo: Todo) -> Bool
     func getall() -> [TodoModel] 
     func deteleAll() -> Bool
+    func editTodo(item: Todo) 
+    
 }
 
 protocol TodoManagerProtocol {
     func add(todo: Todo) -> Bool
     func getAllTodos() -> [Todo]
     func deleteAll() -> Bool
+    func editTodo(item: Todo) 
+
 }

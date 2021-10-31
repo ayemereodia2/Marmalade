@@ -19,7 +19,7 @@ struct AllTaskView: View {
         NavigationView {
             List { 
                 ForEach(alltodo.todo, id: \.id) {
-                    TodoRowView(todo: $0)
+                    TodoRowView(todo: $0, presenter: $presenter)
                 }
             }
             .onAppear {
@@ -67,9 +67,12 @@ struct BlankBackgroundView: View {
 
 struct TodoRowView: View {
     let todo:Todo
+    @Binding var presenter:TodoPresenterProtocol?
     var body: some View {
         HStack {
-            Button {  } label: {
+            Button { 
+                presenter?.modify(todo: todo)
+            } label: {
                 Image(systemName: todo.isDone  ? "checkmark.square" : "square")
             }
             Text(todo.name)

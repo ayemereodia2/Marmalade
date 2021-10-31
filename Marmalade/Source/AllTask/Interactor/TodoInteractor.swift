@@ -8,7 +8,7 @@
 import Foundation
 
 class TodoInteractor: TodoInteractorProtocol {
-    
+  
     var manager: TodoManagerProtocol?
     
     var presenter: TodoPresenterProtocol?
@@ -24,5 +24,10 @@ class TodoInteractor: TodoInteractorProtocol {
        let _ = manager.add(todo: todo)
         let result = manager.getAllTodos() 
         presenter.show(all: result)
+    }
+    
+    func edit(todo: Todo) {
+        manager?.editTodo(item: todo)
+        getAllTodosFromManager()
     }
 }

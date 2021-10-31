@@ -8,6 +8,7 @@
 import RealmSwift
 
 class TodoModel: Object {
+    @Persisted var id = UUID().uuidString
     @Persisted var name: String
     @Persisted var isDone: Bool
     
@@ -16,10 +17,18 @@ class TodoModel: Object {
         self.name = name
         self.isDone = isDone
     }
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 extension TodoModel {
     func convertToDo() -> Todo {
-        return Todo(name: self.name, isDone: self.isDone)
+        var todo = Todo(name: "", isDone: false)
+        todo.id = self.id
+        todo.name = self.name
+        todo.isDone = self.isDone
+        return todo
     }
 }

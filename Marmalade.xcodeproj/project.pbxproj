@@ -94,6 +94,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042A2A89272DE272004034BB /* TodoManager */ = {
+			isa = PBXGroup;
+			children = (
+				04944D05272C177D002D0AC8 /* MockTodoManager.swift */,
+			);
+			path = TodoManager;
+			sourceTree = "<group>";
+		};
+		042A2A8A272DE288004034BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04944D09272C26B0002D0AC8 /* MockTodoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		042A2A8B272DE294004034BB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				04944D0B272C2712002D0AC8 /* MockTodoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		0458A2F9272B2951004DBDFE = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +245,9 @@
 		04944CF3272B4196002D0AC8 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				042A2A8B272DE294004034BB /* Interactor */,
+				042A2A8A272DE288004034BB /* View */,
+				042A2A89272DE272004034BB /* TodoManager */,
 				04944CFB272C0F35002D0AC8 /* Presenter */,
 				04944CF4272B41A5002D0AC8 /* Entity */,
 			);
@@ -231,9 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				04944CF5272B41CB002D0AC8 /* MockTodoEntity.swift */,
-				04944D05272C177D002D0AC8 /* MockTodoManager.swift */,
-				04944D09272C26B0002D0AC8 /* MockTodoView.swift */,
-				04944D0B272C2712002D0AC8 /* MockTodoInteractor.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";

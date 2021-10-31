@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class TodoManager: TodoManagerProtocol {
-    
+
     private(set) lazy var realmDb: TodoEntityProtocol = {
         RealmDb()
     }()
@@ -29,9 +29,13 @@ class TodoManager: TodoManagerProtocol {
       return  realmDb.deteleAll()
     }
     
+    func editTodo(item: Todo) {
+        realmDb.editTodo(item: item)
+    }
 }
 
 class RealmDb: TodoEntityProtocol {
+    
     private var realConnect: Realm
     
      init() {
@@ -40,7 +44,6 @@ class RealmDb: TodoEntityProtocol {
     
     func create(todo: Todo) -> Bool {
         guard let model = todo.ToModel() else { return false }
-       
         do {
             try realConnect.write {
                 realConnect.add(model)
@@ -72,6 +75,22 @@ class RealmDb: TodoEntityProtocol {
             return false
         }
         return true
+        
+    }
+    
+    func editTodo(item: Todo) {
+        guard let itemTemp = item.ToModel() else {
+            return
+        }
+        let result = realConnect.object(ofType: TodoModel.self, forPrimaryKey: itemTemp.id)
+        do {
+            try realConnect.write {
+                result?.isDone = !itemTemp.isDone
+                realConnect.add(result!, update: .modified)
+            }
+        }catch {
+            
+        }
         
     }
 }

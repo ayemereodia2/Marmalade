@@ -8,7 +8,7 @@
 import Foundation
 
 class TodoPresenter: TodoPresenterProtocol {
-    
+        
     var view: TodoViewProtocol?
 
     var interactor: TodoInteractorProtocol?
@@ -23,5 +23,9 @@ class TodoPresenter: TodoPresenterProtocol {
     
     func make(todo: Todo){
         interactor?.create(todo: todo)
+    }
+    
+    func modify(todo: Todo) {
+        interactor?.edit(todo: todo)
     }
 }
