@@ -28,4 +28,8 @@ class TodoPresenter: TodoPresenterProtocol {
     func modify(todo: Todo) {
         interactor?.edit(todo: todo)
     }
+    
+    func clearAll() {
+        interactor?.deleteAll()
+    }
 }

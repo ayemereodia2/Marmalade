@@ -30,4 +30,9 @@ class TodoInteractor: TodoInteractorProtocol {
         manager?.editTodo(item: todo)
         getAllTodosFromManager()
     }
+    
+    func deleteAll() {
+       _ = manager?.deleteAll()
+        getAllTodosFromManager()
+    }
 }

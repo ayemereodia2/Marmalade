@@ -37,6 +37,15 @@ struct AllTaskView: View {
                         NewTodoView(isNewTask: $isNewTask, presenter: $presenter)
                     })
                 }
+            
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    Button {
+                        presenter?.clearAll()
+                    } label: {
+                        Text("Clear All")
+                    }
+                }
+            
             }
             .navigationTitle("My to do list")
             .navigationBarTitleDisplayMode(.large)

@@ -22,6 +22,7 @@ protocol TodoPresenterProtocol: AnyObject {
     func load()
     func make(todo: Todo)
     func modify(todo: Todo)
+    func clearAll()
 }
 
 protocol TodoInteractorProtocol {
@@ -30,6 +31,7 @@ protocol TodoInteractorProtocol {
     func getAllTodosFromManager()
     func create(todo: Todo)
     func edit(todo: Todo)
+    func deleteAll()
 }
 
 protocol TodoEntityProtocol {
